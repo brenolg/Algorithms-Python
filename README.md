@@ -28,6 +28,22 @@ Neste projeto, foi aprimorarado habilidades de resolução de problemas e otimiz
 1.4 - A função deverá, por meio de análise empírica, se comportar (no avaliador remoto em sua Pull Request) como no máximo O(n), ou seja, com complexidade assintótica linear
 
 2 - Implementar adequadamente o teste para a função `encrypt_message`
+<details>
+  <summary>
+    <b>🧠 Entenda a lógica da função de criptografia</b>
+  </summary>
+
+* Recebe uma string `message` e um inteiro `key` como parâmetros
+* Se `key` e `message` não possuírem os tipos corretos, uma exceção deve ser lançada
+* Se `key` não for um índice positivo válido de `message`, retorna a string `message` invertida
+* Se `key` for ímpar:
+  * divide `message` no índice `key`, inverte os caracteres de cada parte, e retorna a união das partes novamente com `"_"` entre elas
+* Se `key` for par:
+  * divide `message` no índice `key`, inverte a posição das partes, inverte os caracteres de cada parte, e retorna a união das partes novamente com `"_"` entre elas
+
+
+
+</details>
 
 3.1 - Retorne `True` se a palavra passada por parâmetro for um palíndromo
 
